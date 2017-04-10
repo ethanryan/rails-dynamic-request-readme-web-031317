@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  get 'about', to: "static#about" #adding this
+
+  #get 'posts/:id', to: 'posts#show' #adding this
+  resources :posts, only: :show #this replaces the line above
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
